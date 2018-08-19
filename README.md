@@ -58,8 +58,7 @@ see also [Github.com's /network/dependencies](https://github.com/coryhouse/javas
 | eslint                      | Lints JavaScript                                                                                          |
 | eslint-plugin-import        | Advanced linting of ES6 imports                                                                           |
 | eslint-watch                | Add watch functionality to ESLint                                                                         |
-| eventsource-polyfill        | Polyfill to support hot reloading in IE                                                                   |
-| expect                      | Assertion library for use with Mocha                                                                      |
+| eventsource-polyfill        | Polyfill to support hot reloading in IE                                                                                                                             |
 | express                     | Serves development and production builds                                                                  |
 | extract-text-webpack-plugin | Extracts CSS into separate file for production build                                                      |
 | file-loader                 | Adds file loading support to Webpack                                                                      |

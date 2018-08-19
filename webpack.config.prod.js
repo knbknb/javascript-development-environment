@@ -19,6 +19,7 @@ export default {
     filename: '[name].[chunkhash].js'
   },
   plugins: [
+    // (separate css and js)
     // Generate an external css file with a hash in the filename
     new ExtractTextPlugin('[name].[contenthash].css'),
 
@@ -60,8 +61,8 @@ export default {
   ],
   module: {
     loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
-      {test: /\.css$/, loader: ExtractTextPlugin.extract('css?sourceMap')}
+      { test: /\.js$/, exclude: /node_modules/, loaders: ['babel'] },
+      { test: /\.css$/, loader: ExtractTextPlugin.extract('css?sourceMap') } // extra param is a hint to webpack
     ]
   }
 };

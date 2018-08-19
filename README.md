@@ -1,6 +1,10 @@
 # JavaScript Development Environment
 
-This is a generic JavaScript development environment that instructor Corey House built from scratch in [Building a JavaScript Development Environment on Pluralsight](https
+This is a generic JavaScript development environment that instructor Corey House built from scratch in [Building a JavaScript Development Environment on Pluralsight](https://app.pluralsight.com/library/courses/javascript-development-environment/table-of-contents).
+
+This uses the Express webserver for rendering content.
+
+Another, simpler, more lightweight javascript dev environment is the [Webpack Frontend Starterkit](https://github.com/wbkd/webpack-starter)
 
 ## Get Started
 
@@ -81,7 +85,7 @@ Run (in appropriate sequence)
 | numeral             | Format and manipulate numbers.                                                  | , |
 | webpack-md5-hash    | Plugin to replace a standard webpack chunkhash with md5.                        |
 
-Missing in `node_modules/`
+Previously used + declared in `[package.json](package.json)`, now missing in `node_modules/`
 
 eventsource-polyfill  
 expect  

@@ -1,7 +1,7 @@
 {
   "name": "javascript-development-environment",
   "version": "1.0.0",
-  "description": "JavaScript development environment Pluralsight course by Cory House",
+  "description": "JavaScript development environment",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
     "start": "npm-run-all --parallel security-check open:src lint:watch test:watch",
@@ -23,11 +23,14 @@
     "postbuild": "babel-node buildScripts/distServer.js",
     "deploy": "surge ./dist"
   },
-  "author": "Cory House",
+  "author": "Knut Behrends",
   "license": "MIT",
   "dependencies": {
     "whatwg-fetch": "^2.0.4"
   },
+  "contributors": [
+    "Cory House, primary author. This file was inspired by a Pluralsight course by "
+  ],
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",

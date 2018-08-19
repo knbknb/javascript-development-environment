@@ -8,8 +8,8 @@ Another, simpler, more lightweight javascript dev environment is the [Webpack Fr
 
 ## Get Started
 
-1. \*\*Install [Node 6 or newer](https
-2. **Clone this repository.** - `git clone https
+1. \*\*Install [Node 6 or newer](http://nodejs.org/)
+2. **Clone this repository.** - `git clone https://github.com/knbknb/javascript-development-environment`
 3. **Make sure you're in the directory you just created.** - `cd javascript-development-environment`
 4. **Install Node Packages.** - `npm install`
 5. **Run the app.** - `npm start -s`
@@ -28,12 +28,14 @@ Another, simpler, more lightweight javascript dev environment is the [Webpack Fr
 
 ## knbknb
 
+Check for breaking updates in the modules listed below. Sometimes, after major releases of any node-module, the definitions of the respective config files change. Properties may get renamed, added, or moved.  
+
 **Check for Updates / Security issues**
 
 Run (in appropriate sequence)
 
     npm install
-    npm  outdated
+    npm outdated
     npm audit
     npm update
     npm install
@@ -87,7 +89,7 @@ Run (in appropriate sequence)
 
 Previously used + declared in `[package.json](package.json)`, now missing in `node_modules/`
 
-eventsource-polyfill  
-expect  
-file-loader
-url-loader
+    eventsource-polyfill  
+    expect  
+    file-loader
+    url-loader

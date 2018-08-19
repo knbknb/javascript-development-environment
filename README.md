@@ -34,10 +34,8 @@ This will run the automated build process, start up a webserver, and open the ap
 | cheerio                     | Supports querying DOM with jQuery like syntax - Useful in testing and build process for HTML manipulation |
 | cross-env                   | Cross-environment friendly way to handle environment variables                                            |
 | css-loader                  | Add CSS support to Webpack                                                                                |
-| eslint                      | Lints JavaScript                
-| 
-| eslint-plugin-vue           | vuejs Components (Syntax highlighting)  
-|
+| eslint                      | Lints JavaScript                                                                                 |
+| eslint-plugin-vue           | vuejs Components (Syntax highlighting)                                                                                |
 | eslint-plugin-import        | Advanced linting of ES6 imports                                                                           |
 | eslint-watch                | Add watch functionality to ESLint                                                                         |
 | eventsource-polyfill        | Polyfill to support hot reloading in IE                                                                   |

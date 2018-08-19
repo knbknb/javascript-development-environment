@@ -34,6 +34,12 @@ Run (in appropriate sequence)
     npm update
     npm install
 
+**Candidate extra plugins**
+
+for package.json
+
+    "html-webpack-plugin": "^3.2.0",    npm i --save-dev html-webpack-plugin
+    
 
 ### Development Dependencies
 

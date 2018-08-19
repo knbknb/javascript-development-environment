@@ -42,6 +42,9 @@ Run (in appropriate sequence)
 
 ### Development Dependencies
 
+see also [Github.com's /network/dependencies](https://github.com/coryhouse/javascript-development-environment/network/dependencies) page for this repo.
+
+
 | **Dependency**              | **Use**                                                                                                   |
 | --------------------------- | --------------------------------------------------------------------------------------------------------- |
 | babel-cli                   | Babel Command line interface                                                                              |

@@ -22,6 +22,19 @@ This will run the automated build process, start up a webserver, and open the ap
 6. Seeing `Error: listen EADDRINUSE :::3000`? That means port 3000 is already in use on your machine. You probably have another instance of this project running on your machine in a different window. So find that window and kill the other instance using Ctrl+C.
 7. Nothing above work? Delete your node_modules folder and re-run npm install.
 
+## knbknb:
+
+**Check for Updates / Security issues**
+
+Run (in appropriate sequence)
+
+
+    npm  outdated
+    npm audit
+    npm update
+    npm install
+
+
 ### Development Dependencies
 
 | **Dependency**              | **Use**                                                                                                   |

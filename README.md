@@ -1,6 +1,6 @@
 # JavaScript Development Environment
 
-This is a generic JavaScript development environment that instructor Corey House built from scratch in [Building a JavaScript Development Environment on Pluralsight](https://app.pluralsight.com/library/courses/javascript-development-environment/table-of-contents).
+This is a generic JavaScript development environment that instructor Cory House [built](https://github.com/coryhouse/javascript-development-environment) from scratch in [Building a JavaScript Development Environment on Pluralsight](https://app.pluralsight.com/library/courses/javascript-development-environment/table-of-contents).
 
 This uses the Express webserver for rendering content.
 

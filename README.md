@@ -89,7 +89,7 @@ see also [Github.com's /network/dependencies](https://github.com/coryhouse/javas
 | numeral             | Format and manipulate numbers.                                                  | , |
 | webpack-md5-hash    | Plugin to replace a standard webpack chunkhash with md5.                        |
 
-Previously used + declared in `[package.json](package.json)`, now missing in `node_modules/`
+Previously used + declared in older versions of this repository, now no longer needed and thus missing in [package.json](package.json) and `node_modules/`
 
     eventsource-polyfill  
     expect  

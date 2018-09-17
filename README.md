@@ -66,7 +66,7 @@ see also [Github.com's /network/dependencies](https://github.com/coryhouse/javas
 | mocha                       | JavaScript testing library                                                                                |
 | npm-run-all                 | Display results of multiple commands on single command line                                               |
 | open                        | Open app in default browser                                                                               |
-| rimraf                      | Delete files                                                                                              |
+| rimraf                      | Delete files and directories, cross-platform                                                                                              |
 | style-loader                | Add Style support to Webpack                                                                              |
 | url-loader                  | Add url loading support to Webpack                                                                        |
 | webpack                     | Bundler with plugin system and integrated development server                                              |
@@ -89,7 +89,7 @@ see also [Github.com's /network/dependencies](https://github.com/coryhouse/javas
 | numeral             | Format and manipulate numbers.                                                  | , |
 | webpack-md5-hash    | Plugin to replace a standard webpack chunkhash with md5.                        |
 
-Previously used + declared in `[package.json](package.json)`, now missing in `node_modules/`
+Previously used + declared in older versions of this repository, now no longer needed and thus missing in [package.json](package.json) and `node_modules/`
 
     eventsource-polyfill  
     expect  

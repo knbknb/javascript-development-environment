@@ -66,7 +66,7 @@ see also [Github.com's /network/dependencies](https://github.com/coryhouse/javas
 | mocha                       | JavaScript testing library                                                                                |
 | npm-run-all                 | Display results of multiple commands on single command line                                               |
 | open                        | Open app in default browser                                                                               |
-| rimraf                      | Delete files                                                                                              |
+| rimraf                      | Delete files and directories, cross-platform                                                                                              |
 | style-loader                | Add Style support to Webpack                                                                              |
 | url-loader                  | Add url loading support to Webpack                                                                        |
 | webpack                     | Bundler with plugin system and integrated development server                                              |

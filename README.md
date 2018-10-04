@@ -1,19 +1,25 @@
 # JavaScript Development Environment
 
-This is a generic JavaScript development environment that instructor Cory House [built](https://github.com/coryhouse/javascript-development-environment) from scratch in [Building a JavaScript Development Environment on Pluralsight](https://app.pluralsight.com/library/courses/javascript-development-environment/table-of-contents).
+This is a generic JavaScript development environment that instructor Cory House [built](https://github.com/coryhouse/javascript-development-environment) from scratch in [Building a JavaScript Development Environment on Pluralsight](https://app.pluralsight.com/library/courses/javascript-development-environment/table-of-contents). The DevEnvironment uses the Express webserver for rendering content. It contains a sample project that renders a small datatable, by using data binding to a JSON file (or a database).
 
-This uses the Express webserver for rendering content.
+Another, simpler, more lightweight javascript dev environment is the [Webpack Frontend Starterkit](https://github.com/wbkd/webpack-starter). (It still requires transpiling with babel, though)
 
-Another, simpler, more lightweight javascript dev environment is the [Webpack Frontend Starterkit](https://github.com/wbkd/webpack-starter)
+## "npm-scripts" section
+
+Concerning the `npm scripts` section in file `package.json`:
+
+See official documentation: https://docs.npmjs.com/misc/scripts
+
+`npm-run-all --parallel` performs concurrent npm tasks (`npm run` can only run a single command at a time)
 
 ## Get Started
 
-1. \*\*Install [Node 6 or newer](http://nodejs.org/)
+1. Install [Node 6 or newer](http://nodejs.org/)
 2. **Clone this repository.** - `git clone https://github.com/knbknb/javascript-development-environment`
 3. **Make sure you're in the directory you just created.** - `cd javascript-development-environment`
 4. **Install Node Packages.** - `npm install`
-5. **Run the app.** - `npm start -s`
-   This will run the automated build process, start up a webserver, and open the application in your default browser. When doing development with this kit, this command will continue watching files all your files. Every time you hit save the code is rebuilt, linting runs, and tests run automatically. Note
+5. **Run the app.** - `npm start -s` (-s : silent)
+   This will run the automated build process, start up a webserver, and open the application in your default browser. When doing development with this kit, this command will continue watching files all your files. Every time you hit save the code is rebuilt, linting runs, and tests run automatically.
 6. Having issues? See below.
 
 ## Having Issues? Try these things first
@@ -23,7 +29,7 @@ Another, simpler, more lightweight javascript dev environment is the [Webpack Fr
 3. Make sure files with names that begin with a dot (.babelrc, .editorconfig, .eslintrc) are copied to the project directory root. This is easy to overlook if you copy this repository manually.
 4. Don't run the project from a symbolic link. It will cause issues with file watches.
 5. Having linting issues? Delete any .eslintrc that you're storing in your user directory. Also, disable any ESLint plugin / custom rules that you've enabled within your editor. These will conflict with the ESLint rules defined in the course.
-6. Seeing `Error
+6. Seeing `Error`?
 7. Nothing above work? Delete your node_modules folder and re-run npm install.
 
 ## knbknb
@@ -63,18 +69,18 @@ see also [Github.com's /network/dependencies](https://github.com/coryhouse/javas
 | **Dependency**              | **Use**                                                                                                   |
 | --------------------------- | --------------------------------------------------------------------------------------------------------- |
 | babel-cli                   | Babel Command line interface                                                                              |
-| babel-core                  | Babel Core for transpiling the new JavaScript to old                                                      |
+| babel-core                  | Babel Core for transpiling the new JavaScript to "old-school" JS                                          |
 | babel-loader                | Adds Babel support to Webpack                                                                             |
 | babel-preset-latest         | Babel preset for running all the latest standardized JavaScript features                                  |
 | babel-register              | Register Babel to transpile our Mocha tests                                                               |
 | cheerio                     | Supports querying DOM with jQuery like syntax - Useful in testing and build process for HTML manipulation |
 | cross-env                   | Cross-environment friendly way to handle environment variables                                            |
 | css-loader                  | Add CSS support to Webpack                                                                                |
-| eslint                      | Lints JavaScript                                                                                          |
+| eslint                      | Lints and optionally fixes JavaScript                                                                     |
 | eslint-plugin-import        | Advanced linting of ES6 imports                                                                           |
 | eslint-watch                | Add watch functionality to ESLint                                                                         |
 | eventsource-polyfill        | Polyfill to support hot reloading in IE                                                                   |
-| express                     | Serves development and production builds                                                                  |
+| express                     | Webserver, serves development and production builds                                                       |
 | extract-text-webpack-plugin | Extracts CSS into separate file for production build                                                      |
 | file-loader                 | Adds file loading support to Webpack                                                                      |
 | jsdom                       | In-memory DOM for testing                                                                                 |
@@ -88,7 +94,7 @@ see also [Github.com's /network/dependencies](https://github.com/coryhouse/javas
 | webpack-dev-middleware      | Adds middleware support to webpack                                                                        |
 | webpack-hot-middleware      | Adds hot reloading to webpack                                                                             |
 
-**Newer Modules**
+#### Newer Modules
 
 | **Dependency**      | **Use**                                                                         |
 | ------------------- | ------------------------------------------------------------------------------- |
@@ -104,9 +110,22 @@ see also [Github.com's /network/dependencies](https://github.com/coryhouse/javas
 | numeral             | Format and manipulate numbers.                                                  | , |
 | webpack-md5-hash    | Plugin to replace a standard webpack chunkhash with md5.                        |
 
-Previously used + declared in older versions of this repository, now no longer needed and thus missing in [package.json](package.json) and `node_modules/`
+Previously used + declared in older versions of this repository, now no longer needed and thus removed from in [package.json](package.json) and missing in `node_modules/`:
 
     eventsource-polyfill
     expect
     file-loader
     url-loader
+
+#### Babel note
+
+Transpile for target environment. Use these dev-dependencies:
+
+node: babel-preset-es2015-node
+electron: babel-preset-latest-minimal
+
+🙌 Thanks for using Babel: we recommend using babel-preset-env now: please read [babeljs.io/env](https://babeljs.io/docs/en/env/) to update!
+
+#### Typescript
+
+see blog post "[TypeScript and Babel 7](https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/)" by Microsoft

@@ -28,22 +28,37 @@ Another, simpler, more lightweight javascript dev environment is the [Webpack Fr
 
 ## knbknb
 
-Check for breaking updates in the modules listed below. Sometimes, after major releases of any node-module, the definitions of the respective config files change. Properties may get renamed, added, or moved.  
+Check for breaking updates in the modules listed below. Sometimes, after major releases of any node-module, the definitions of the respective config files change. Properties may get renamed, added, or moved.
 
-**Check for Updates / Security issues**
+### Check for Updates / Security issues
 
 Run (in appropriate sequence)
 
-    npm install
     npm outdated
+    //npm install
+    //npm install -g
+
     npm audit
-    npm update
-    npm install
+    npm audit fix
+    //npm update
+
+### Sharing WIP
+
+Optional: Install localtunnel to publish quickly to the internet
+
+```{sh}
+npm install -g localtunnel
+
+lt --port <myport>  -subdomain knbknb
+```
+
+(Also check out Surge, Now, Ngrok).
+
+Possibly combine with [Browsersync](https://github.com/BrowserSync/browser-sync).
 
 ### Development Dependencies
 
 see also [Github.com's /network/dependencies](https://github.com/coryhouse/javascript-development-environment/network/dependencies) page for this repo.
-
 
 | **Dependency**              | **Use**                                                                                                   |
 | --------------------------- | --------------------------------------------------------------------------------------------------------- |
@@ -58,7 +73,7 @@ see also [Github.com's /network/dependencies](https://github.com/coryhouse/javas
 | eslint                      | Lints JavaScript                                                                                          |
 | eslint-plugin-import        | Advanced linting of ES6 imports                                                                           |
 | eslint-watch                | Add watch functionality to ESLint                                                                         |
-| eventsource-polyfill        | Polyfill to support hot reloading in IE                                                                                                                             |
+| eventsource-polyfill        | Polyfill to support hot reloading in IE                                                                   |
 | express                     | Serves development and production builds                                                                  |
 | extract-text-webpack-plugin | Extracts CSS into separate file for production build                                                      |
 | file-loader                 | Adds file loading support to Webpack                                                                      |
@@ -66,7 +81,7 @@ see also [Github.com's /network/dependencies](https://github.com/coryhouse/javas
 | mocha                       | JavaScript testing library                                                                                |
 | npm-run-all                 | Display results of multiple commands on single command line                                               |
 | open                        | Open app in default browser                                                                               |
-| rimraf                      | Delete files and directories, cross-platform                                                                                              |
+| rimraf                      | Delete files and directories, cross-platform                                                              |
 | style-loader                | Add Style support to Webpack                                                                              |
 | url-loader                  | Add url loading support to Webpack                                                                        |
 | webpack                     | Bundler with plugin system and integrated development server                                              |
@@ -91,7 +106,7 @@ see also [Github.com's /network/dependencies](https://github.com/coryhouse/javas
 
 Previously used + declared in older versions of this repository, now no longer needed and thus missing in [package.json](package.json) and `node_modules/`
 
-    eventsource-polyfill  
-    expect  
+    eventsource-polyfill
+    expect
     file-loader
     url-loader

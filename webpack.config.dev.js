@@ -8,10 +8,11 @@ export default {
     extensions: ['*', '.js', '.jsx', '.json']
   },
   devtool: 'inline-source-map',
-
+  // debug: true, ?deprecated
+  // noInfo: false,
   entry: [path.resolve(__dirname, 'src/index')],
   target: 'web',
-  output: {
+  output: { //does not write any files actually
     path: path.resolve(__dirname, 'src'),
     publicPath: '/',
     filename: 'bundle.js'

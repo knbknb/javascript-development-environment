@@ -1,4 +1,5 @@
 # Appveyor is a continuous integration environment
+# that runs well on windows (unlike travis-ci which runs well on Linux)
 # Test against this version of Node.js
 environment:
   matrix:

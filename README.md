@@ -84,7 +84,7 @@ see also the links on [Github.com's /network/dependencies](https://github.com/co
 | extract-text-webpack-plugin | Extracts CSS into separate file for production build                                                                        |
 | file-loader                 | Adds file loading support to Webpack                                                                                        |
 | jsdom                       | In-memory DOM for testing. No need for a headless browser.                                                                  |
-| mocha                       | JavaScript testing library                                                                                                  |
+| mocha                       | JavaScript testing library. We use it with the minimalist reporter caalled "progress"                                       |
 | npm-run-all                 | Display results of multiple commands on single command line                                                                 |
 | open                        | Open app in default browser                                                                                                 |
 | rimraf                      | Delete files and directories, cross-platform                                                                                |

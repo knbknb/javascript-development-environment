@@ -64,51 +64,51 @@ Possibly combine with [Browsersync](https://github.com/BrowserSync/browser-sync)
 
 ### Development Dependencies
 
-see also [Github.com's /network/dependencies](https://github.com/coryhouse/javascript-development-environment/network/dependencies) page for this repo.
+see also the links on [Github.com's /network/dependencies](https://github.com/coryhouse/javascript-development-environment/network/dependencies) page for this repo. ou can also write `npm repo <pkgname>` on the command line to open a dependency's github page.
 
-| **Dependency**              | **Use**                                                                                                   |
-| --------------------------- | --------------------------------------------------------------------------------------------------------- |
-| babel-cli                   | Babel Command line interface                                                                              |
-| babel-core                  | Babel Core for transpiling the new JavaScript to "old-school" JS                                          |
-| babel-loader                | Adds Babel support to Webpack                                                                             |
-| babel-preset-latest         | Babel preset for running all the latest standardized JavaScript features                                  |
-| babel-register              | Register Babel to transpile our Mocha tests                                                               |
-| cheerio                     | Supports querying DOM with jQuery like syntax - Useful in testing and build process for HTML manipulation |
-| cross-env                   | Cross-environment friendly way to handle environment variables                                            |
-| css-loader                  | Add CSS support to Webpack                                                                                |
-| eslint                      | Lints and optionally fixes JavaScript                                                                     |
-| eslint-plugin-import        | Advanced linting of ES6 imports                                                                           |
-| eslint-watch                | Add watch functionality to ESLint                                                                         |
-| eventsource-polyfill        | Polyfill to support hot reloading in IE                                                                   |
-| express                     | Webserver, serves development and production builds                                                       |
-| extract-text-webpack-plugin | Extracts CSS into separate file for production build                                                      |
-| file-loader                 | Adds file loading support to Webpack                                                                      |
-| jsdom                       | In-memory DOM for testing                                                                                 |
-| mocha                       | JavaScript testing library                                                                                |
-| npm-run-all                 | Display results of multiple commands on single command line                                               |
-| open                        | Open app in default browser                                                                               |
-| rimraf                      | Delete files and directories, cross-platform                                                              |
-| style-loader                | Add Style support to Webpack                                                                              |
-| url-loader                  | Add url loading support to Webpack                                                                        |
-| webpack                     | Bundler with plugin system and integrated development server                                              |
-| webpack-dev-middleware      | Adds middleware support to webpack                                                                        |
-| webpack-hot-middleware      | Adds hot reloading to webpack                                                                             |
+| **Dependency**              | **Use**                                                                                                                     |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| babel-cli                   | Babel Command line interface                                                                                                |
+| babel-core                  | Babel Core for transpiling the new JavaScript to "old-school" JS                                                            |
+| babel-loader                | Adds Babel support to Webpack                                                                                               |
+| babel-preset-latest         | Babel preset for running all the latest standardized JavaScript features                                                    |
+| babel-register              | Register Babel to transpile our Mocha tests                                                                                 |
+| cheerio                     | Supports querying DOM with jQuery like syntax - Useful in testing and build process for HTML manipulation. See `chai` below |
+| cross-env                   | Cross-environment friendly way to handle environment variables                                                              |
+| css-loader                  | Add CSS support to Webpack                                                                                                  |
+| eslint                      | Lints and optionally fixes JavaScript                                                                                       |
+| eslint-plugin-import        | Advanced linting of ES6 imports                                                                                             |
+| eslint-watch                | Add watch functionality to ESLint                                                                                           |
+| eventsource-polyfill        | Polyfill to support hot reloading in IE                                                                                     |
+| express                     | Webserver, serves development and production builds                                                                         |
+| extract-text-webpack-plugin | Extracts CSS into separate file for production build                                                                        |
+| file-loader                 | Adds file loading support to Webpack                                                                                        |
+| jsdom                       | In-memory DOM for testing. No need for a headless browser.                                                                  |
+| mocha                       | JavaScript testing library                                                                                                  |
+| npm-run-all                 | Display results of multiple commands on single command line                                                                 |
+| open                        | Open app in default browser                                                                                                 |
+| rimraf                      | Delete files and directories, cross-platform                                                                                |
+| style-loader                | Add Style support to Webpack                                                                                                |
+| url-loader                  | Add url loading support to Webpack                                                                                          |
+| webpack                     | Bundler with plugin system and integrated development server                                                                |
+| webpack-dev-middleware      | Adds middleware support to webpack                                                                                          |
+| webpack-hot-middleware      | Adds hot reloading to webpack                                                                                               |
 
 #### Newer Modules
 
-| **Dependency**      | **Use**                                                                         |
-| ------------------- | ------------------------------------------------------------------------------- |
-| chai                | BDD/TDD assertion library for node.js and the browser. Test framework agnostic. |
-| chalk               | Terminal string styling done right                                              |
-| compression         | Node.js compression middleware                                                  |
-| html-webpack-plugin | Simplifies creation of HTML files to serve your webpack bundles                 |
-| json-schema-faker   | JSON-Schema + fake data generators                                              |
-| json-server         | Serves JSON files through REST routes.                                          | , |
-| localtunnel         | expose localhost to the world                                                   |
-| nock                | HTTP server mocking and expectations library for Node.js                        | , |
-| npm-run-all         | A CLI tool to run multiple npm-scripts in parallel or sequential.               |
-| numeral             | Format and manipulate numbers.                                                  | , |
-| webpack-md5-hash    | Plugin to replace a standard webpack chunkhash with md5.                        |
+| **Dependency**      | **Use**                                                                                              |
+| ------------------- | ---------------------------------------------------------------------------------------------------- |
+| chai                | BDD/TDD assertion library for node.js and the browser. Test framework agnostic. See `cheerio` above. |
+| chalk               | Terminal string styling done right                                                                   |
+| compression         | Node.js compression middleware                                                                       |
+| html-webpack-plugin | Simplifies creation of HTML files to serve your webpack bundles                                      |
+| json-schema-faker   | JSON-Schema + fake data generators                                                                   |
+| json-server         | Serves JSON files through REST routes.                                                               | , |
+| localtunnel         | expose localhost to the world                                                                        |
+| nock                | HTTP server mocking and expectations library for Node.js                                             | , |
+| npm-run-all         | A CLI tool to run multiple npm-scripts in parallel or sequential.                                    |
+| numeral             | Format and manipulate numbers.                                                                       | , |
+| webpack-md5-hash    | Plugin to replace a standard webpack chunkhash with md5.                                             |
 
 Previously used + declared in older versions of this repository, now no longer needed and thus removed from in [package.json](package.json) and missing in `node_modules/`:
 
@@ -129,3 +129,13 @@ electron: babel-preset-latest-minimal
 #### Typescript
 
 see blog post "[TypeScript and Babel 7](https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/)" by Microsoft
+
+#### Webpack
+
+Sourcemaps: https://webpack.js.org/guides/development/#using-source-maps
+
+#### Testing
+
+Put test files alongside the source files. This results in easier imports, clear visibility. No redundant folder structure, convenient to open.
+
+RUn unit tests each time when a file is saved (use watchers)

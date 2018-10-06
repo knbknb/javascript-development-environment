@@ -11,6 +11,14 @@ import { schema } from './mockDataSchema';
 import fs from 'fs';
 import chalk from 'chalk';
 
+jsf.extend('faker', () => {
+  const faker = require('faker');
+
+  faker.locale = 'de'; // or any other language
+
+  return faker;
+});
+
 const json = JSON.stringify(jsf(schema));
 
 fs.writeFile('./src/api/db.json', json, function(err) {

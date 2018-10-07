@@ -2,7 +2,8 @@ import webpack from 'webpack';
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import WebpackMd5Hash from 'webpack-md5-hash';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
+//import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 //debug: true,
 //noInfo: false,
 
@@ -11,14 +12,14 @@ export default {
   resolve: {
     extensions: ['*', '.js', '.jsx', '.json']
   },
-  devtool: 'source-map',
+  devtool: 'source-map',  //higher quality than 'inline-source-maps'
   entry: {
     vendor: path.resolve(__dirname, 'src/vendor'),
     main: path.resolve(__dirname, 'src/index')
   },
   target: 'web',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'),  // new
     publicPath: '/',
     filename: '[name].[chunkhash].js'
   },
@@ -45,7 +46,8 @@ export default {
     // (separate css and js)
     // Generate an external css file with a hash in the filename
     //new ExtractTextPlugin('[name].[contenthash].css'),
-    new ExtractTextPlugin('[name].[md5:contenthash:hex:20].css'),
+    new MiniCssExtractPlugin('[name].[md5:contenthash:hex:20].css'),
+    //new ExtractTextPlugin('[name].[md5:contenthash:hex:20].css'),
     // Hash the files using MD5 so that their names change when the content changes.
     new WebpackMd5Hash(),
 
@@ -67,7 +69,7 @@ export default {
         removeEmptyAttributes: true,
         removeStyleLinkTypeAttributes: true,
         keepClosingSlash: true,
-        minifyJS: true,
+        minifyJS: true,  // replaces UglifyJSPlugin
         minifyCSS: true,
         minifyURLs: true
       },
@@ -86,11 +88,31 @@ export default {
   ],
   module: {
     rules: [
-      { test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader'] },
+      // { test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader'] },
+      // {
+      //   test: /\.css$/,
+      //   loader: ExtractTextPlugin.extract('css-loader?sourceMap')
+      // } // extra param is a hint to webpack
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('css-loader?sourceMap')
-      } // extra param is a hint to webpack
-    ]
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              modules: true,
+              localIdentName: '[local]___[hash:base64:5]'
+            }
+          },
+
+          // {
+          //   loader: 'postcss-loader'
+          // }
+        ]
+      }]
   }
 };

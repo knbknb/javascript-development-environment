@@ -1,9 +1,14 @@
 import webpack from 'webpack';
 import path from 'path';
+// minify html, and dynamically add names of bundled .css and .js files.
+// these filenames (e.g. vendor.479204b0e8d197d6051b.js) change with every build
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import WebpackMd5Hash from 'webpack-md5-hash';
-//import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import WebpackMd5Hash from 'webpack-md5-hash'; //cache-busting
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+//import ExtractTextPlugin from 'extract-text-webpack-plugin';
+
+// commonsChunkPlugin: removed in Webpack 4. Use optimization.splitChunks instead.
+
 //debug: true,
 //noInfo: false,
 
@@ -12,7 +17,9 @@ export default {
   resolve: {
     extensions: ['*', '.js', '.jsx', '.json']
   },
-  devtool: 'source-map',  //higher quality than 'inline-source-maps'
+  //higher quality than 'inline-source-maps'
+  devtool: 'source-map',
+  // bundle-splitting
   entry: {
     vendor: path.resolve(__dirname, 'src/vendor'),
     main: path.resolve(__dirname, 'src/index')
@@ -21,9 +28,10 @@ export default {
   output: {
     path: path.resolve(__dirname, 'dist'),  // new
     publicPath: '/',
-    filename: '[name].[chunkhash].js'
-  },
-  // Webpack 4 removed the commonsChunkPlugin. Use optimization.splitChunks instead.
+    // 'name' refers to 'entry' key above
+    // 'chunkhash' to new WebpackMd5Hash() below
+    filename: '[name].[chunkhash].js' },
+  // was: commonsChunkPlugin. Use optimization.splitChunks instead.
   optimization: {
     splitChunks: {
       cacheGroups: {
@@ -38,8 +46,8 @@ export default {
   plugins: [
     // Global loader configuration
     new webpack.LoaderOptionsPlugin({
-      minimize: true,
-      debug: false,
+      minimize: false,
+      debug: true,
       noInfo: true // set to false to see a list of every file being bundled.
     }),
 
@@ -69,14 +77,14 @@ export default {
         removeEmptyAttributes: true,
         removeStyleLinkTypeAttributes: true,
         keepClosingSlash: true,
-        minifyJS: true,  // replaces UglifyJSPlugin
+        minifyJS: false,  // replaces UglifyJSPlugin?
         minifyCSS: true,
-        minifyURLs: true
+        minifyURLs: false
       },
       inject: true,
       // Properties you define here are available in index.html
       // using htmlWebpackPlugin.options.varName
-      trackJSToken: 'INSERT YOUR TOKEN HERE'
+      trackJSToken: false, //'INSERT YOUR TOKEN HERE'
     })
 
     // Eliminate duplicate packages when generating bundle

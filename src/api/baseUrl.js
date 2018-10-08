@@ -1,7 +1,8 @@
+/* eslint no-debugger: 0 */
 export default function getBaseUrl() {
   return getQueryStringParameterByName('useMockApi')
     ? 'http://localhost:3001/'
-    : 'https://mysterious-dawn-16770.herokuapp.com/';
+    : 'https://arcane-ocean-94777.herokuapp.com/';
 }
 
 function getQueryStringParameterByName(name, url) {

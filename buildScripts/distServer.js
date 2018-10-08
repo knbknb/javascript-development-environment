@@ -10,7 +10,7 @@ import compression from 'compression'; // gzip in express
 const port = 3000;
 const app = express();
 
-// express web framework
+// express web framework: serve from this folder
 app.use(express.static('dist'));
 app.use(compression());
 

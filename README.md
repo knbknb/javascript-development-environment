@@ -4,13 +4,6 @@ This is a generic JavaScript development environment that instructor Cory House 
 
 Another, simpler, more lightweight javascript dev environments (among many others) is the [Webpack Frontend Starterkit](https://github.com/wbkd/webpack-starter). It still requires a relatively complex processing step, transpiling with babel, though.
 
-## "npm-scripts" section
-
-Concerning the `npm scripts` section in file `package.json`:
-
-See official documentation: https://docs.npmjs.com/misc/scripts
-
-`npm-run-all --parallel` performs concurrent npm tasks (`npm run` can only run a single command at a time)
 
 ## Get Started
 
@@ -34,6 +27,18 @@ See official documentation: https://docs.npmjs.com/misc/scripts
 ## knbknb Notes
 
 Check for breaking updates in the modules listed below. Sometimes, after major releases of any node-module, especially for webpack, the definitions of the respective config files change. Properties may get renamed, added, or moved.
+
+## "npm-scripts" section
+
+Concerning the `npm scripts` section in file `package.json`:
+
+See official documentation: https://docs.npmjs.com/misc/scripts
+
+`npm-run-all --parallel` performs concurrent npm tasks (`npm run` can only run a single command at a time)
+
+## /build subdirectory
+
+Also contains important `.js` files which perform complex build steps.
 
 ### Check for Updates / Security issues
 

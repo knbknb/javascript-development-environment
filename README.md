@@ -7,7 +7,7 @@ Another, simpler, more lightweight javascript dev environments (among many other
 
 ## Get Started
 
-1. Install [Node 6 or newer](http://nodejs.org/). I use v.10.11.0.
+1. Install [Node 6 or newer](http://nodejs.org/). I use v8.11.2 and v.10.11.0.
 2. **Clone this repository.** - `git clone https://github.com/knbknb/javascript-development-environment`
 3. **Make sure you're in the directory you just created.** - `cd javascript-development-environment`
 4. **Install Node Packages.** - `npm install`
@@ -72,11 +72,12 @@ see also the links on [Github.com's /network/dependencies](https://github.com/co
 
 | **Dependency**              | **Use**                                                                                                                     |
 | --------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| babel-cli                   | Babel Command line interface                                                                                                |
-| babel-core                  | Babel Core for transpiling the new JavaScript to "old-school" JS                                                            |
+| @babel/cli                   | Babel Command line interface                                                                                                |
+| @babel/node                   | https://babeljs.io/  |
+| @babel/core                  | Babel Core for transpiling the new JavaScript to "old-school" JS                                                            |
 | babel-loader                | Adds Babel support to Webpack                                                                                               |
-| babel-preset-latest         | Babel preset for running all the latest standardized JavaScript features                                                    |
-| babel-register              | Register Babel to transpile our Mocha tests                                                                                 |
+| @babel/preset-env         | Babel preset for running all the latest standardized JavaScript features                                                    |
+| @babel/register              | Register Babel to transpile our Mocha tests                                                                                 |
 | cheerio                     | Supports querying DOM with jQuery like syntax - Useful in testing and build process for HTML manipulation. See `chai` below |
 | cross-env                   | Cross-environment friendly way to handle environment variables                                                              |
 | css-loader                  | Add CSS support to Webpack                                                                                                  |

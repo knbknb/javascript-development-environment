@@ -1,8 +1,8 @@
 # JavaScript Development Environment
 
-This is a generic JavaScript development environment that instructor Cory House [built](https://github.com/coryhouse/javascript-development-environment) from scratch in [Building a JavaScript Development Environment on Pluralsight](https://app.pluralsight.com/library/courses/javascript-development-environment/table-of-contents). The DevEnvironment uses the Express webserver for rendering content. It contains a sample project that renders a small datatable, by using data binding to a JSON file (or a database).
+This is a generic JavaScript development environment that instructor Cory House [built](https://github.com/coryhouse/javascript-development-environment) from scratch in [Building a JavaScript Development Environment on Pluralsight](https://app.pluralsight.com/library/courses/javascript-development-environment/table-of-contents). The DevEnvironment uses the Express webserver for rendering content. It contains a sample project that renders a small datatable, by using data binding to a JSON file.
 
-Another, simpler, more lightweight javascript dev environment is the [Webpack Frontend Starterkit](https://github.com/wbkd/webpack-starter). (It still requires transpiling with babel, though)
+Another, simpler, more lightweight javascript dev environments is (among many others) the [Webpack Frontend Starterkit](https://github.com/wbkd/webpack-starter). (It still requires transpiling with babel, though)
 
 ## "npm-scripts" section
 
@@ -24,17 +24,16 @@ See official documentation: https://docs.npmjs.com/misc/scripts
 
 ## Having Issues? Try these things first
 
-1. Run `npm install` - If you forget to do this, you'll see this
-2. Try running the latest version of Node.
+1. Run `npm install` - If you forget to do this, you'll see a verbose error.
+2. Try running the latest version of Node. (works with v10.11.1)
 3. Make sure files with names that begin with a dot (.babelrc, .editorconfig, .eslintrc) are copied to the project directory root. This is easy to overlook if you copy this repository manually.
-4. Don't run the project from a symbolic link. It will cause issues with file watches.
+4. Don't run the project from a symbolic link. It will cause issues with file watchers.
 5. Having linting issues? Delete any .eslintrc that you're storing in your user directory. Also, disable any ESLint plugin / custom rules that you've enabled within your editor. These will conflict with the ESLint rules defined in the course.
-6. Seeing `Error`?
-7. Nothing above work? Delete your node_modules folder and re-run npm install.
+6. Still seeing `Error`? Nothing above work? Delete your node_modules folder and re-run npm install.
 
 ## knbknb
 
-Check for breaking updates in the modules listed below. Sometimes, after major releases of any node-module, the definitions of the respective config files change. Properties may get renamed, added, or moved.
+Check for breaking updates in the modules listed below. Sometimes, after major releases of any node-module, especially for webpack, the definitions of the respective config files change. Properties may get renamed, added, or moved.
 
 ### Check for Updates / Security issues
 
@@ -48,7 +47,7 @@ Run (in appropriate sequence)
     npm audit fix
     //npm update
 
-### Sharing WIP
+### Sharing Work in Progress
 
 Optional: Install localtunnel to publish quickly to the internet
 
@@ -58,7 +57,7 @@ npm install -g localtunnel
 lt --port <myport>  -subdomain knbknb
 ```
 
-(Also check out Surge, Now, Ngrok).
+(Also check out [Surge](https://surge.sh), Now, Ngrok).
 
 Possibly combine with [Browsersync](https://github.com/BrowserSync/browser-sync).
 
@@ -99,7 +98,7 @@ see also the links on [Github.com's /network/dependencies](https://github.com/co
 | **Dependency**      | **Use**                                                                                              |
 | ------------------- | ---------------------------------------------------------------------------------------------------- |
 | chai                | BDD/TDD assertion library for node.js and the browser. Test framework agnostic. See `cheerio` above. |
-| chalk               | Terminal string styling done right                                                                   |
+| chalk               | Terminal string styling done right (colored output)                                                                  |
 | compression         | Node.js compression middleware                                                                       |
 | html-webpack-plugin | Simplifies creation of HTML files to serve your webpack bundles                                      |
 | json-schema-faker   | JSON-Schema + fake data generators                                                                   |
@@ -126,11 +125,11 @@ electron: babel-preset-latest-minimal
 
 🙌 Thanks for using Babel: we recommend using babel-preset-env now: please read [babeljs.io/env](https://babeljs.io/docs/en/env/) to update!
 
-#### Typescript
+#### Typescript (not used, not tried)
 
 see blog post "[TypeScript and Babel 7](https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/)" by Microsoft
 
-#### Webpack
+#### Webpack (v4)
 
 Sourcemaps: https://webpack.js.org/guides/development/#using-source-maps
 
@@ -138,4 +137,4 @@ Sourcemaps: https://webpack.js.org/guides/development/#using-source-maps
 
 Put test files alongside the source files. This results in easier imports, clear visibility. No redundant folder structure, convenient to open.
 
-RUn unit tests each time when a file is saved (use watchers)
+Run unit tests each time when a file is saved (use watchers). 

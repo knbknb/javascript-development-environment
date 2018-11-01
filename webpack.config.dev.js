@@ -15,7 +15,9 @@ export default {
   output: { //does not write any files actually
     path: path.resolve(__dirname, 'src'),
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    //also watch static files in / for changes:
+    //watchContentBase: true
   },
   plugins: [
     new webpack.LoaderOptionsPlugin({

@@ -28,7 +28,7 @@
     "whatwg-fetch": "3.0.0"
   },
   "contributors": [
-    "Cory House, primary author. This file was inspired by a Pluralsight course by him."
+    "This file was inspired by a Pluralsight course by Cory House."
   ],
   "devDependencies": {
     "@babel/cli": "7.1.2",
